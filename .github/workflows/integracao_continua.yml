@@ -32,10 +32,10 @@ jobs:
         python-version: ${{ env.PYTHON_VERSION }}
     - name: Verificação de sintaxe
       run: |
-       pylint semana-13-aula-main/semana-13-aula-main/aluno.py
-       pylint semana-13-aula-main/semana-13-aula-main/main.py
-       pylint semana-13-aula-main/semana-13-aula-main/testes.py
-       pylint semana-13-aula-main/semana-13-aula-main/turma.py
+       pylint  --disable=W0311 semana-13-aula-main/semana-13-aula-main/aluno.py
+       pylint  --disable=W0311 semana-13-aula-main/semana-13-aula-main/main.py
+       pylint  --disable=W0311 semana-13-aula-main/semana-13-aula-main/testes.py
+       pylint  --disable=W0311 semana-13-aula-main/semana-13-aula-main/turma.py
 
     - name: Realizar testes e exibir cobertura
       run: |

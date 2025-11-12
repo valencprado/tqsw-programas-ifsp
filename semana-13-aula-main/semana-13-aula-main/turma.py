@@ -14,7 +14,7 @@ class Turma:
           self.maiorNota = i;     
             
 
-  def mostrarAlunos(self):  
+  def mostrar_alunos(self):  
     print('Quantidade de alunos:', len(self.turma));
     for x in self.turma:      
       print(x.mostrarAluno());

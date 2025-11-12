@@ -11,7 +11,7 @@ alunos.append(a.Aluno('Angela', 'Teixeira', 6));
 turmaObject = t.Turma();
 turmaObject.cadastrarAlunos(alunos);
 
-turmaObject.mostrarAlunos();
+turmaObject.mostrar_alunos();
 print('*'*30)
 print('Aluno com menor nota:', turmaObject.menorNota.mostrarAluno())
 print('Aluno com maior nota:', turmaObject.maiorNota.mostrarAluno())
