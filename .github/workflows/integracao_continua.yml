@@ -2,9 +2,11 @@ name: Fluxo integração contínua - Valentina C. Prado PT302539X
 
 on:
   push:
-    branches: [ "main" ]
+    paths:
+      - 'semana_13-aula-main/*'
   pull_request:
-    branches: [ "main" ]
+    paths:
+      - 'semana_13-aula-main/*'
 
 env:
   PYTHON_VERSION: "3.9"
