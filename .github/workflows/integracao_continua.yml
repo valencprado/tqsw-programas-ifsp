@@ -5,10 +5,12 @@ on:
     branches: [ "main" ]
     paths:
       - 'semana_13-aula-main/*'
+      - '.github/workflows/integracao_continua.yml'
   pull_request:
     branches: [ "main" ]
     paths:
       - 'semana_13-aula-main/*'
+      - '.github/workflows/integracao_continua.yml'
 
 env:
   PYTHON_VERSION: "3.9"
