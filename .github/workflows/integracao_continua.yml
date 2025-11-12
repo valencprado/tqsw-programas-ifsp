@@ -26,7 +26,7 @@ jobs:
         python-version: ${{ env.PYTHON_VERSION }}
     - name: Instalar dependências
       run: |
-        pip install pytest pylint pytest-cov
+       pip install pytest==6.2.5 pylint==2.12.2 pytest-cov==2.12.1
     - uses: actions/checkout@v3
       with:
         python-version: ${{ env.PYTHON_VERSION }}
