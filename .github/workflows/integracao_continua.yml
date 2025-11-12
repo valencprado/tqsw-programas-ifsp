@@ -16,7 +16,7 @@ env:
   PYTHON_VERSION: "3.9"
 
 jobs:
-  build-lint:
+  build-lint-test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -33,15 +33,6 @@ jobs:
     - name: Verificação de sintaxe
       run: |
         pylint *.py
-
-  test:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python ${{ env.PYTHON_VERSION }}
-      uses: actions/setup-python@v3
-      with:
-        python-version: ${{ env.PYTHON_VERSION }}
     - name: Realizar testes e exibir cobertura
       run: |
         pytest --cov
