@@ -1,4 +1,10 @@
+'''
+Módulo aluno.py
+'''
 class Aluno:
+  '''
+  Classe que representa um aluno no sistema
+  '''
   def __init__(self, nome, sobrenome, nota):
     self.nome = nome
     self.sobrenome = sobrenome

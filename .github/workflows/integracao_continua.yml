@@ -32,10 +32,20 @@ jobs:
         python-version: ${{ env.PYTHON_VERSION }}
     - name: Verificação de sintaxe
       run: |
-       pylint  --disable=W0311 semana-13-aula-main/semana-13-aula-main/aluno.py
-       pylint  --disable=W0311 semana-13-aula-main/semana-13-aula-main/main.py
-       pylint  --disable=W0311 semana-13-aula-main/semana-13-aula-main/testes.py
-       pylint  --disable=W0311 semana-13-aula-main/semana-13-aula-main/turma.py
+            set -euo pipefail
+            rc=0
+            files=(
+              "semana-13-aula-main/semana-13-aula-main/aluno.py"
+              "semana-13-aula-main/semana-13-aula-main/main.py"
+              "semana-13-aula-main/semana-13-aula-main/testes.py"
+              "semana-13-aula-main/semana-13-aula-main/turma.py"
+            )
+            for f in "${files[@]}"; do
+              echo "Linting $f"
+              pylint --disable=W0311,R0903 "$f" || rc=1
+             
+            done
+            exit $rc
 
     - name: Realizar testes e exibir cobertura
       run: |
