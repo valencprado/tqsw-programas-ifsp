@@ -32,7 +32,11 @@ jobs:
         python-version: ${{ env.PYTHON_VERSION }}
     - name: Verificação de sintaxe
       run: |
-        pylint *.py
+       pylint semana-13-aula-main/semana-13-aula-main/aluno.py
+       pylint semana-13-aula-main/semana-13-aula-main/main.py
+       pylint semana-13-aula-main/semana-13-aula-main/testes.py
+       pylint semana-13-aula-main/semana-13-aula-main/turma.py
+
     - name: Realizar testes e exibir cobertura
       run: |
-        pytest --cov
+        pytest semana-13-aula-main/semana-13-aula-main --cov=semana-13-aula-main/semana-13-aula-main
