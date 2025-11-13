@@ -49,4 +49,5 @@ jobs:
 
     - name: Realizar testes e exibir cobertura
       run: |
-        pytest semana-13-aula-main/semana-13-aula-main --cov=semana-13-aula-main/semana-13-aula-main
+        cd semana-13-aula-main/semana-13-aula-main
+        pytest testes.py --cov=. --cov-report=term-missing
