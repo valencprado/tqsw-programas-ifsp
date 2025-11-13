@@ -4,12 +4,12 @@ on:
   push:
     branches: [ "main" ]
     paths:
-      - 'semana-13-aula-main/*'
+      - 'semana-13-aula-main/semana-13-aula-main/*'
       - '.github/workflows/integracao_continua.yml'
   pull_request:
     branches: [ "main" ]
     paths:
-      - 'semana-13-aula-main/*'
+      - 'semana-13-aula-main/semana-13-aula-main/*'
       - '.github/workflows/integracao_continua.yml'
 
 env:
